@@ -95,6 +95,7 @@ export default function IntegrationModal(params) {
               <option value="webdav">WebDAV</option>
               <option value="ftp">FTP</option>
               <option value="dropbox">Dropbox</option>
+              <option value="google">Google</option>
             </Form.Control>
 
             <Form.Label>Name</Form.Label>
@@ -161,7 +162,7 @@ export default function IntegrationModal(params) {
               </>
             )}
 
-            {integrationForm.provider === "dropbox" && (
+            {(integrationForm.provider === "dropbox" || integrationForm.provider === "google") && (
               <>
                 <Form.Label>Access Token</Form.Label>
                 <Form.Control
